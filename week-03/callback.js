@@ -10,9 +10,16 @@ function doJob(job, time, cb) {
   let now = new Date();
   console.log(`開始工作 at ${now.toISOString()}`);
   // write your code here
-  // 以下是使用範例
   doJob('刷牙', 1000, function (data) {
-    // 表示 doJob 做完了
-    console.log(data);
+    console.log(data);  // 刷牙完成
+    doJob('吃早餐', 3000, function (data) {
+      console.log(data);  // 吃早餐完成
+      doJob('寫功課', 1000, function (data) {
+        console.log(data);  // 寫功課完成
+        doJob('吃午餐', 2000, function (data) {
+          console.log(data);  // 吃午餐完成
+        });
+      });
+    });
   });
   
