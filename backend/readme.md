@@ -2,8 +2,8 @@
 
 ## package.json 中的 dependencies 與 devDependencies 分別是什麼
 
-* 我在這個應用程式上用了什麼套件
-* 我只有在開發或測試的時候需要的套件
+* dependencies: 我在這個應用程式上用了什麼套件
+* devDependencies: 我只有在開發或測試的時候需要的套件
 
 ## package.json 中的 scripts 這個區塊怎麼用？
 
