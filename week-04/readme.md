@@ -2,8 +2,6 @@
 
 ## 1. instance public IP: [3.106.252.32](<http://3.106.252.32/>)
 
-* 
-
 ## 2. 什麼是 instance type？
 
 * 
@@ -38,6 +36,7 @@
 
 ## 10. 列出完成本作業時參考的資料
 
-* [YT 影片] The NGINX Crash Course  Nginx 
-* [YT 影片] Amazon EC2 Basics & Instances Tutorial
-* [官方文件] Connect to your Linux instance using an SSH client
+* [Linux Directories Explained in 100 Seconds](<https://www.youtube.com/watch?v=42iQKuQodW4>)
+* [The NGINX Crash Course Nginx](<https://lightda-tw.notion.site/20241002-W04-4-1132ceabc70c8048bbd2d228ad660156>) 
+* [Amazon EC2 Basics & Instances Tutorial](<https://www.youtube.com/watch?v=iHX-jtKIVNA>)
+* [Connect to your Linux instance using an SSH client](<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html>)
