@@ -1,6 +1,6 @@
 # W04 - 個人作業 4
 
-## 1. instance public IP: 3.106.252.32
+## 1. instance public IP: [3.106.252.32](<http://3.106.252.32/>)
 
 * 
 
@@ -38,4 +38,6 @@
 
 ## 10. 列出完成本作業時參考的資料
 
-*
+* [YT 影片] The NGINX Crash Course  Nginx 
+* [YT 影片] Amazon EC2 Basics & Instances Tutorial
+* [官方文件] Connect to your Linux instance using an SSH client
