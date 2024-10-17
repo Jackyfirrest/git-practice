@@ -46,6 +46,7 @@
 ## 9. Nginx 的 Log 檔案在哪裡？你怎麼找到的？怎麼看 Nginx 的 Log？
 
 * Nginx 的日誌文件通常在 /var/log/nginx/ 目錄下，包括 access.log 和 error.log。你可以用 cat、tail 或 less 命令來查看這些日誌文件，例如：
+
 > sudo tail -f /var/log/nginx/access.log
 > sudo tail -f /var/log/nginx/error.log
 
