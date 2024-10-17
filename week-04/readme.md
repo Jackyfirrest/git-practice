@@ -20,13 +20,13 @@
 
 ## 6. 在 readme 中提供步驟 9 的 Nginx 設定檔
 
-> server {
+* server {
     listen 80;
 
     server_name 3.106.252.32;  
 
     location / {
-        proxy_pass http://localhost:3000;
+        proxy_pass <http://localhost:3000>;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -46,9 +46,8 @@
 ## 9. Nginx 的 Log 檔案在哪裡？你怎麼找到的？怎麼看 Nginx 的 Log？
 
 * Nginx 的日誌文件通常在 /var/log/nginx/ 目錄下，包括 access.log 和 error.log。你可以用 cat、tail 或 less 命令來查看這些日誌文件，例如：
-
-> sudo tail -f /var/log/nginx/access.log
-> sudo tail -f /var/log/nginx/error.log
+  * sudo tail -f /var/log/nginx/access.log
+  * sudo tail -f /var/log/nginx/error.log
 
 ## 10. Linux 檔案目錄結構
 
