@@ -1,0 +1,14 @@
+## 回答問題
+
+1. 你的網址，應該是 https://www.ntuweb.live，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
+2. 你在哪裡購買網域的: name.com
+3. DNS 的 A record 是什麼？
+   - A 記錄（Address Record）是 DNS 記錄的一種，用於將域名解析到 IPv4 地址。
+4. DNS 的 NS record 是什麼？
+   - NS 記錄（Name Server Record）是 DNS 記錄的一種，用於指定域名的權威名稱伺服器。
+5. Domain Name vs FQDN vs URL 這三者分別為何？
+   - Domain Name（域名）：是一個用於標識網路資源的名稱，例如 `ntuweb.live`。
+   - FQDN（Fully Qualified Domain Name，完全限定域名）：是一個完整的域名，包括主機名和域名，例如 `www.ntuweb.live`。
+   - URL（Uniform Resource Locator，統一資源定位符）：是一個用於定位網路資源的地址，包括協議、域名和路徑，例如 `https://www.ntuweb.live/path/to/resource`。
+6. 為什麼應該要為網站加上憑證？而不是直接用 http 就好？
+   - 為網站加上憑證可以加密數據傳輸，保護用戶的隱私和安全，防止數據被竊聽和篡改。使用 HTTPS 也可以提高網站的信任度和 SEO 排名。
