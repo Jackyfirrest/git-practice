@@ -1,6 +1,6 @@
 ## 回答問題
 
-1. 你的網址，應該是 https://www.ntuweb.live，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
+1. 你的網址，應該是 <https://www.ntuweb.live>，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
 2. 你在哪裡購買網域的: name.com
 3. DNS 的 A record 是什麼？
    - A 記錄（Address Record）是 DNS 記錄的一種，用於將域名解析到 IPv4 地址。
