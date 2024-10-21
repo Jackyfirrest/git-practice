@@ -1,6 +1,32 @@
 # W05 - 個人作業 5
 
-1. 你的網址，應該是 <https://www.ntuweb.live>，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
+1. 你的網址，應該是 <https://ntuweb.live>，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
+   - 需先在 AWS Security Group 設定 SSL 的 443 port 接口，再安裝 SSL 憑證到 Nginx
+   - Nginx 設定檔
+      server {
+         listen 80;
+         server_name ntuweb.live;
+
+         # Redirect all HTTP requests to HTTPS
+         return 301 https://$host$request_uri;
+      }
+
+      server {
+         listen 443 ssl;
+         server_name ntuweb.live;
+
+         ssl_certificate /etc/ssl/certs/certificate.crt;
+         ssl_certificate_key /etc/ssl/private/private.key;
+
+         location / {
+            proxy_pass http://localhost:3000;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+         }
+      }
 2. 你在哪裡購買網域的: name.com
 3. DNS 的 A record 是什麼？
    - A 記錄（Address Record）是 DNS 記錄的一種，用於將域名解析到 IPv4 地址。
