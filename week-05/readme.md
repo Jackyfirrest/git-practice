@@ -8,6 +8,14 @@
    ```nginx
    server {
        listen 80;
+       server_name 3.106.252.32;
+
+       # Redirect all HTTP requests to HTTPS
+       return 301 https://$host$request_uri;
+   }
+
+   server {
+       listen 80;
        server_name ntuweb.live;
 
        # Redirect all HTTP requests to HTTPS
