@@ -3,31 +3,37 @@
 1. 你的網址，應該是 <https://ntuweb.live>，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
    - 需先在 AWS Security Group 設定 SSL 的 443 port 接口，再安裝 SSL 憑證到 Nginx
    - 將下載好的 SSL 憑證移動到目錄資料夾
-   - 設定 Nginx 設定檔 sudo nano /etc/nginx/sites-available/default
-         server {
-            listen 80;
-            server_name ntuweb.live;
+   - 設定 Nginx 設定檔 'sudo nano /etc/nginx/sites-available/default'
 
-            # Redirect all HTTP requests to HTTPS
-            return 301 https://$host$request_uri;
-         }
+   ```nginx
+   server {
+       listen 80;
+       server_name ntuweb.live;
 
-         server {
-            listen 443 ssl;
-            server_name ntuweb.live;
+       # Redirect all HTTP requests to HTTPS
+       return 301 https://$host$request_uri;
+   }
 
-            ssl_certificate /etc/ssl/certs/certificate.crt;
-            ssl_certificate_key /etc/ssl/private/private.key;
+   server {
+       listen 443 ssl;
+       server_name ntuweb.live;
 
-            location / {
-               proxy_pass http://localhost:3000;
-               proxy_http_version 1.1;
-               proxy_set_header Upgrade $http_upgrade;
-               proxy_set_header Connection 'upgrade';
-               proxy_set_header Host $host;
-               proxy_cache_bypass $http_upgrade;
-            }
-         }
+       ssl_certificate /etc/ssl/certs/certificate.crt;
+       ssl_certificate_key /etc/ssl/private/private.key;
+
+       location / {
+           proxy_pass http://localhost:3000;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+
+       access_log /var/log/nginx/nginx.vhost.access.log;
+       error_log /var/log/nginx/nginx.vhost.error.log;
+   }  
+
 2. 你在哪裡購買網域的: name.com
 3. DNS 的 A record 是什麼？
    - A 記錄（Address Record）是 DNS 記錄的一種，用於將域名解析到 IPv4 地址。
