@@ -2,7 +2,7 @@
 
 1. 你的網址，應該是 <https://ntuweb.live>，點擊過去應該要可以看到個人作業 4 架設的 Express server （由 Nginx proxy 到 Express）
    - 需先在 AWS Security Group 設定 SSL 的 443 port 接口，再安裝 SSL 憑證到 Nginx
-   - 將下載好的 SSL 憑證移動到目錄資料夾
+   - 將下載好的 SSL 憑證移動到目錄資料夾，合併 crt 檔案
    - 設定 Nginx 設定檔 `sudo nano /etc/nginx/sites-available/default`
 
    ```nginx
